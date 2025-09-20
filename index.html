@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneAdvise - Tư vấn điện thoại giá rẻ cấu hình cao</title>
+    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1YHBVR3V7J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  // Measurement ID của bạn
+  gtag('config', 'G-1YHBVR3V7J', { 'send_page_view': true });
+</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>PhoneAdvice</h1>
+                <p>Chọn điện thoại thông minh - Đơn giản, dễ dàng</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="htmls/coming-soon.html">So sánh</a></li>
+                    <li><a href="htmls/coming-soon.html">Đánh giá</a></li>
+                    <li><a href="htmls/ve-chung-toi.html">Về chúng tôi</a></li>
+                    <li><a href="htmls/contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Bạn không am hiểu về công nghệ?<br>Chúng tôi sẽ giúp bạn!</h2>
+            <p>Công cụ tư vấn thông minh giúp bạn lựa chọn điện thoại phù hợp nhất với nhu cầu và ngân sách</p>
+            <button class="cta-button" onclick="scrollToAdvisor()">Bắt đầu ngay</button>
+        </section>
+
+        <section class="featured-phones">
+            <h2>Điện thoại nổi bật giá dưới 5 triệu</h2>
+            <div class="phone-card">
+    <h3>Tecno Pova 7</h3>
+    <div class="rating">★★★★☆ 4.8</div>
+    <ul>
+        <li>Màn hình: 6.78 inch IPS LCD</li>
+        <li>Pin: 7000 mAh (2 ngày sử dụng)</li>
+        <li>Camera: 108MP + 2M chụp siêu nét</li>
+        <li>Hiệu năng: Chơi game mượt mà</li>
+    </ul>
+    <div class="price">3.990.000₫</div>
+    <button class="buy-button">Xem chi tiết</button>
+</div>
+
+
+
+                <div class="phone-card">
+                    <h3>Realme C55</h3>
+                    <div class="rating">★★★★☆ 4.6</div>
+                    <ul>
+                        <li>Màn hình: 6.72" - Tần số quét 90 Hz</li>
+                        <li>Pin: 5000 mAh (sử dụng lâu)</li>
+                        <li>Camera: Chính 64 MP & Phụ 2 MP đa chức năng</li>
+                        <li>Bộ nhớ: 128GB/256GB (thoải mái lưu trữ)</li>
+                    </ul>
+                    <div class="price">3.480.000₫ </div>
+                    <button class="buy-button">Xem chi tiết</button>
+                </div>
+                
+
+                <div class="phone-card">
+                    <h3>Nubia V70 Design</h3>
+                    <div class="rating">★★★★☆ 4.5</div>
+                    <ul>
+                        <li>Màn hình: 6.72" - Tần số quét 120 Hz</li>
+                        <li>Pin: 5000 mAh (bền bỉ)</li>
+                        <li>Camera: 50 MP, ƒ/1.8, 2.0 MP chụp ảnh sắc nét</li>
+                        <li>Sạc nhanh: Hỗ trợ sạc nhanh 22.5W</li>
+                    </ul>
+                    <div class="price">3.290.000₫</div>
+                    <button class="buy-button">Xem chi tiết</button>
+                </div>
+            </div>
+            <h3>Lưu ý: <I>Giá cả có thể thay đổi theo thị trường và thời gian</I></h3>
+             
+        </section>
+
+        <section id="advisor" class="advisor">
+            <h2>Công cụ tư vấn chọn điện thoại</h2>
+            <p>Trả lời các câu hỏi dưới đây để chúng tôi đề xuất điện thoại phù hợp với bạn</p>
+            
+            <div class="quiz-container">
+                <div class="question active">
+                    <h3>Bạn muốn sử dụng điện thoại chủ yếu cho mục đích gì?</h3>
+                    <div class="options">
+                        <button data-value="basic">Gọi điện, nhắn tin, lướt web</button>
+                        <button data-value="camera">Chụp ảnh, quay video</button>
+                        <button data-value="game">Chơi game, giải trí</button>
+                        <button data-value="work">Công việc, đa nhiệm</button>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <h3>Bạn quan tâm nhất đến yếu tố nào?</h3>
+                    <div class="options">
+                        <button data-value="battery">Pin trâu, sử dụng lâu</button>
+                        <button data-value="screen">Màn hình đẹp, lớn</button>
+                        <button data-value="performance">Mượt mà, không giật lag</button>
+                        <button data-value="brand">Thương hiệu uy tín</button>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <h3>Bạn có thường chụp ảnh selfie (tự sướng) không?</h3>
+                    <div class="options">
+                        <button data-value="often">Rất thường xuyên</button>
+                        <button data-value="sometimes">Thỉnh thoảng</button>
+                        <button data-value="rarely">Hiếm khi</button>
+                        <button data-value="never">Hầu như không bao giờ</button>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <h3>Bạn muốn sử dụng điện thoại trong bao lâu?</h3>
+                    <div class="options">
+                        <button data-value="1">Khoảng 1 năm</button>
+                        <button data-value="2">Khoảng 2 năm</button>
+                        <button data-value="3">Khoảng 3 năm</button>
+                        <button data-value="long">Càng lâu càng tốt</button>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <h3>Ngân sách của bạn là bao nhiêu?</h3>
+                    <div class="options">
+                        <button data-value="3">Dưới 3 triệu</button>
+                        <button data-value="5">Từ 3 - 5 triệu</button>
+                        <button data-value="7">Từ 5 - 7 triệu</button>
+                        <button data-value="10">Trên 7 triệu</button>
+                    </div>
+                </div>
+
+                <div class="navigation">
+                    <button id="prev-btn" disabled>Quay lại</button>
+                    <button id="next-btn">Tiếp theo</button>
+                    <button id="submit-btn" style="display: none;">Xem kết quả</button>
+                </div>
+            </div>
+
+            <div id="result" class="result-container" style="display: none;">
+                <h3>Điện thoại phù hợp với bạn</h3>
+                <div class="recommendation">
+                    <!-- Kết quả sẽ được hiển thị ở đây -->
+                </div>
+            </div>
+        </section>
+
+        <section class="guides">
+            <h2>Hướng dẫn chọn mua điện thoại</h2>
+            <div class="guide-list">
+                <article class="guide-card">
+                    <h3>5 tiêu chí quan trọng khi chọn điện thoại giá rẻ</h3>
+                    <p>Hiểu rõ những yếu tố thực sự quan trọng giúp bạn chọn được điện thoại tốt nhất trong tầm giá.</p>
+                    <a href="htmls/5-tieu-chi.html">Đọc thêm →</a>
+                </article>
+
+                <article class="guide-card">
+                    <h3>Điện thoại giá rẻ mà RAM 12GB, sự thật hay chiêu trò marketing?</h3>
+                    <p>Nhiều điện thoại giá rẻ quảng cáo RAM 12GB, nhưng thực tế chỉ có 6GB vật lý và 6GB mở rộng ảo. Vậy sự khác biệt này ảnh hưởng thế nào đến trải nghiệm? Nên mua hay không?</p>
+                    <a href="htmls/ram-that-ao.html">Đọc thêm →</a>
+                </article>
+
+                <article class="guide-card">
+                    <h3>So sánh chip điện thoại: Chip nào mạnh nhất 2025?</h3>
+                    <p>Khám phá bảng so sánh chip điện thoại mới nhất 2025: hiệu năng, tiết kiệm pin, chơi game mượt mà. Chọn chip mạnh và phù hợp với nhu cầu của bạn.</p>
+                    <a href="htmls/so-sanh-chip.html">Đọc thêm →</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PhoneAdvice</h3>
+                    <p>Trang blog chuyên tư vấn và đánh giá điện thoại giá rẻ cấu hình cao, giúp người dùng không am hiểu công nghệ có thể dễ dàng lựa chọn.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Chuyên mục nổi bật</h3>
+                    <ul>
+                        <li><a href="htmls/coming-soon.html">Bảng giá thị trường</a></li>
+                        <li><a href="htmls/coming-soon.html">Khuyến mãi hot</a></li>
+                        <li><a href="htmls/contact.html">Hỏi đáp & liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kết nối với chúng tôi</h3>
+                    <div class="social-icons">
+                        <a href="https://x.com/noir_nguyenn?t=OsfQvOGgyxbbs-aj8yA9kA&s=09"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/trong-nguyen-le-627067384/"><i class="fab fa-linkedin-in"></i></a>    
+                        <a href="https://github.com/NoirNguyen2007"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PhoneAdvice. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>

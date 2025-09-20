@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneAdvice - Coming Soon</title>
+    <!-- Font + Icon -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="../css/coming-soon.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1YHBVR3V7J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  // Measurement ID của bạn
+  gtag('config', 'G-1YHBVR3V7J', { 'send_page_view': true });
+</script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>PhoneAdvice</h1>
+                <p>Chọn điện thoại thông minh - Đơn giản, dễ dàng</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="coming-soon.html">So sánh</a></li>
+                    <li><a href="coming-soon.html">Đánh giá</a></li>
+                    <li><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Coming Soon -->
+    <main>
+        <div class="coming-soon">
+            <div class="coming-content">
+                <div class="icon-container">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2>Tính năng mới sắp ra mắt!</h2>
+                <p>Chúng tôi đang nỗ lực hoàn thiện tính năng mới để mang đến trải nghiệm tốt nhất cho bạn. Hãy quay lại sau nhé!</p>
+                
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Ngày</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Giờ</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Phút</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Giây</span>
+                    </div>
+                </div>
+                
+                <div class="notify-form">
+                    <h3>Đăng ký nhận thông báo khi ra mắt</h3>
+                    <form id="notifyForm" class="notify-input">
+                        <input type="email" placeholder="Nhập email của bạn..." required>
+                        <button type="submit">Thông báo cho tôi</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PhoneAdvice</h3>
+                    <p>Trang blog chuyên tư vấn và đánh giá điện thoại giá rẻ cấu hình cao, giúp người dùng không am hiểu công nghệ có thể dễ dàng lựa chọn.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Chuyên mục nổi bật</h3>
+                    <ul>
+                        <li><a href="../index.html">Trang chủ</a></li>
+                        <li><a href="coming-soon.html">Đánh giá điện thoại</a></li>
+                        <li><a href="coming-soon.html">So sánh sản phẩm</a></li>
+                        <li><a href="ve-chung-toi.html">Về chúng tôi</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>         
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kết nối với chúng tôi</h3>
+                    <div class="social-icons">
+                        <a href="https://x.com/noir_nguyenn?t=OsfQvOGgyxbbs-aj8yA9kA&s=09"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/trong-nguyen-le-627067384/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/NoirNguyen2007"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PhoneAdvice. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Countdown Script -->
+    <script>
+        // Set target date (183 days from now)
+        const targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 183);
+        
+        // Update countdown every second
+        const countdownTimer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            
+            // Calculate days, hours, minutes, seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display results
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+            
+            // If countdown is over
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("countdown").innerHTML = "<div class='countdown-complete'>Tính năng đã ra mắt!</div>";
+            }
+        }, 1000);
+        
+        // Form submission
+        document.getElementById('notifyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Simple validation
+            if (!email || !email.includes('@')) {
+                alert('Vui lòng nhập địa chỉ email hợp lệ.');
+                return;
+            }
+            
+            // Success message
+            alert('🎉 Cảm ơn bạn đã đăng ký! Chúng tôi sẽ thông báo cho bạn ngay khi tính năng chính thức ra mắt.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

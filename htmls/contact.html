@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ Của Tôi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="../css/contact.css">
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1YHBVR3V7J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  // Measurement ID của bạn
+  gtag('config', 'G-1YHBVR3V7J', { 'send_page_view': true });
+</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h1>Noir Nguyễn</h1>
+                <p> Tôi không phải chuyên gia tôi chỉ là người chia sẻ kinh nghiệm về điện thoại & công nghệ di động cho mọi người không am hiểu điện thoại cũng có thể dễ dàng chọn lựa.</p>
+            </div>
+        </div>
+    </head>
+
+    <main class="container">
+        <div class="contact-info">
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <a href="https://mail.google.com/mail/?view=cm&to=NoirNguyen2007@proton.me" target="_blank">NoirNguyen2007@proton.me</a>
+            </div>
+            
+            <div class="info-card">
+                <i class="fas fa-phone"></i>
+                <h3>Số Điện Thoại</h3>
+                <a href="tel:+84866XXXXXX">086-6XX-XXXX</a>
+            </div>
+            
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Địa Chỉ</h3>
+                <p><p>Địa chỉ: XXX, XXX, XXX</p></p>
+                <p>Việt Nam</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Gửi tin nhắn cho tôi</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Họ và tên</label>
+                    <input type="text" id="name" placeholder="Nhập họ và tên của bạn" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Nhập địa chỉ email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Chủ đề</label>
+                    <input type="text" id="subject" placeholder="Nhập chủ đề liên hệ" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Nội dung tin nhắn</label>
+                    <textarea id="message" placeholder="Nhập nội dung tin nhắn của bạn..." required></textarea>
+                </div>
+                
+                <button type="submit">Gửi tin nhắn <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+
+        <div class="social-media">
+            <h2>Theo dõi tôi trên</h2>
+            <div class="social-icons">
+                <a href="https://x.com/noir_nguyenn?t=OsfQvOGgyxbbs-aj8yA9kA&s=09"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/trong-nguyen-le-627067384/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/NoirNguyen2007"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Noir Nguyễn. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Cảm ơn bạn đã gửi tin nhắn! Tôi sẽ phản hồi lại sớm nhất có thể.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

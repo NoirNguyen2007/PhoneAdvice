@@ -1,0 +1,48 @@
+/* Global Text Improvements - Áp dụng cho toàn site */
+.about-text p, 
+.mission p, 
+.vision p, 
+.team-member p, 
+.value-item p,
+.article-content p,
+.post-content p,
+.card-text p,
+.text-container p {
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 1.2em;
+}
+
+/* Cải thiện khoảng cách cho các tiêu đề */
+.content-section h2, 
+.content-section h3, 
+.card-title,
+.post-title {
+    margin-bottom: 0.8em;
+    line-height: 1.4;
+}
+
+/* Áp dụng chung cho các paragraph trong main content */
+main p {
+    line-height: 1.7;
+    margin-bottom: 1.2em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-text p, 
+    .mission p, 
+    .vision p, 
+    .team-member p, 
+    .value-item p,
+    .article-content p,
+    .post-content p,
+    .card-text p,
+    .text-container p,
+    main p {
+        line-height: 1.6;
+        text-align: left;
+    }
+}
+
+
