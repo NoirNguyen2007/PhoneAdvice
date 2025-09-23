@@ -74,7 +74,7 @@ const devices = [
     },
      {
         name: "Itel RS4 NFC",
-        price: 3390000,  // Giá tham khảo 3.390.000₫ (phiên bản 12/256GB, có thể điều chỉnh cho phiên bản khác)
+        price: 3290000,  // Giá tham khảo 3.290.000₫ (phiên bản 8/128GB, có thể điều chỉnh cho phiên bản khác)
         batteryScore: 82,
         cameraScore: 85,
         performanceScore: 92,
@@ -265,7 +265,7 @@ function submitQuiz() {
         alert("Vui lòng trả lời đủ 5 câu hỏi!");
         return;
     }
-
+    
     // Lọc thiết bị trong ngân sách
     const budgetMap = {
     	"2": [1000000, 2000000],
@@ -304,7 +304,7 @@ function submitQuiz() {
         <p>Giá: ${bestDevice.price.toLocaleString()}₫</p>
         <p>Điểm phù hợp: ${Math.round(bestDevice.score)}/100</p>
         <p>Lý do: ${bestDevice.reasons.join(", ")}</p>
-        <a href="${bestDevice.link}" target="_blank" class="buy-button">Xem chi tiết</a>
+        <a href="${bestDevice.link}" target="_blank" class="quiz-buy-button">Xem chi tiết trên Shoppe</a>
         <button onclick="shareResult('${bestDevice.name}')">Chia sẻ kết quả</button>
         
         ${scoredDevices.length > 1 ? `
