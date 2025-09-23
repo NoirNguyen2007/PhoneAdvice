@@ -191,6 +191,23 @@ header {
     background-color: #2980b9;
 }
 
+/* Quiz xem chi tiết*/
+.quiz-buy-button {
+    display: inline-block;       /* chỉ rộng vừa chữ */
+    padding: 8px 16px;           /* gọn gàng, không full-width */
+    background-color: white;      /* nền trắng */
+    color: #3498db;               /* chữ xanh */
+    border: 1px solid #3498db;    /* viền xanh mảnh */
+    border-radius: 5px;           /* bo góc */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #3498db;   /* nền xanh khi hover */
+    color: white;                 /* chữ trắng khi hover */
+}
+
 /* Advisor Section */
 .advisor {
     margin: 60px 0;
