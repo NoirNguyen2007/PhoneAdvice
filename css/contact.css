@@ -1,0 +1,182 @@
+/* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+/* Header */
+        header {
+            background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            margin-bottom: 20px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar i {
+            font-size: 70px;
+            color: #6a11cb;
+        }
+
+        .profile h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .profile p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+/* Main Content */
+        main {
+            padding: 50px 0;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card i {
+            font-size: 2.5rem;
+            color: #6a11cb;
+            margin-bottom: 20px;
+        }
+
+        .info-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .info-card p, .info-card a {
+            font-size: 1.1rem;
+            color: #666;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .info-card a:hover {
+            color: #2575fc;
+        }
+
+/* Social Media */
+        .social-media {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .social-media h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(38, 117, 252, 0.4);
+        }
+
+/* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+/* Responsive Design */
+        @media (max-width: 768px) {
+            .profile h1 {
+                font-size: 2rem;
+            }
+            
+            .profile p {
+                font-size: 1rem;
+            }
+            
+            .contact-form {
+                padding: 20px;
+            }
+            
+            .social-icons a {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+/* Cập nhật ngày 1/10/2025 : Nội Dung; xoá bỏ from nhập thông tin contact.html + contact.css*/

@@ -1,0 +1,28 @@
+/* Paragraph mặc định */
+main p {
+  line-height: 1.7;
+  margin-bottom: 1.2em;
+  text-align: left;
+  color: #444; /* thêm màu chữ dịu mắt */
+}
+
+/* Các khối đặc thù (blog, bài viết) */
+.article-content p,
+.post-content p {
+  text-align: justify; /* riêng blog thì justify */
+  line-height: 1.8;
+}
+
+/* Heading */
+h2, h3 {
+  margin: 1.5em 0 0.8em;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main p {
+    line-height: 1.6;
+  }
+}
