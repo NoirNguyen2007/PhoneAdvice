@@ -134,13 +134,27 @@
     }
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YHBVR3V7J"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-1YHBVR3V7J', { 'send_page_view': true });
-    </script>
+  function loadAnalytics() {
+    if (window.gtagLoaded) return;
+    window.gtagLoaded = true;
+
+    var gtagScript = document.createElement('script');
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-1YHBVR3V7J";
+    gtagScript.async = true;
+    document.head.appendChild(gtagScript);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-1YHBVR3V7J', { 'send_page_view': true });
+  }
+
+  window.addEventListener('scroll', loadAnalytics, { once: true });
+  window.addEventListener('mousemove', loadAnalytics, { once: true });
+  window.addEventListener('touchstart', loadAnalytics, { once: true });
+</script>
+
 </head>
 <body>
     <!-- Header ( Phần mở đầu ) -->
