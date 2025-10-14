@@ -36,13 +36,26 @@
 		<link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
 
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-1YHBVR3V7J"></script>
 		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){ dataLayer.push(arguments); }
-			gtag('js', new Date());
-			gtag('config', 'G-1YHBVR3V7J', { 'send_page_view': true });
-		</script>
+  function loadAnalytics() {
+    if (window.gtagLoaded) return;
+    window.gtagLoaded = true;
+
+    var gtagScript = document.createElement('script');
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-1YHBVR3V7J";
+    gtagScript.async = true;
+    document.head.appendChild(gtagScript);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-1YHBVR3V7J', { 'send_page_view': true });
+  }
+
+  window.addEventListener('scroll', loadAnalytics, { once: true });
+  window.addEventListener('mousemove', loadAnalytics, { once: true });
+  window.addEventListener('touchstart', loadAnalytics, { once: true });
+</script>
 
 		<!-- Schema Markup: WebSite -->
 		<script type="application/ld+json">
@@ -840,6 +853,7 @@
 							<a href="https://x.com/noir_nguyenn?t=OsfQvOGgyxbbs-aj8yA9kA&s=09"><i class="fab fa-twitter"></i></a>
 							<a href="https://www.linkedin.com/in/trong-nguyen-le-627067384/"><i class="fab fa-linkedin-in"></i></a>
 							<a href="https://github.com/NoirNguyen2007"><i class="fab fa-github"></i></a>
+							<a href="https://www.facebook.com/profile.php?id=61582158842856"><i class="fab fa-facebook"></i></a>
 						</div>
 					</div>
 				</div>
