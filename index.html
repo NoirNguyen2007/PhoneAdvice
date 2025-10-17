@@ -30,13 +30,16 @@
 
 		<!-- Font & Link -->
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 		<link rel="stylesheet" href="index.css" />
 		<link rel="stylesheet" href="../css/global-text.css" />
 		<link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
 
 		<!-- Google tag (gtag.js) -->
-		<script>
+<script>
+  // Luôn khai báo toàn cục trước
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+
   function loadAnalytics() {
     if (window.gtagLoaded) return;
     window.gtagLoaded = true;
@@ -46,10 +49,11 @@
     gtagScript.async = true;
     document.head.appendChild(gtagScript);
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-1YHBVR3V7J', { 'send_page_view': true });
+    // Khi script tải xong, mới config
+    gtagScript.onload = function() {
+      gtag('js', new Date());
+      gtag('config', 'G-1YHBVR3V7J', { 'send_page_view': true });
+    };
   }
 
   window.addEventListener('scroll', loadAnalytics, { once: true });
@@ -189,9 +193,9 @@
 
 			<section class="featured-phones">
 				<div class="container">
-					<h2><i class="fas fa-mobile-alt" style="color:#2c3e50;"></i> Điện thoại nổi bật giá dưới 5 triệu</h2>
+					<h2><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#1f1f1f"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>Điện thoại nổi bật giá dưới 5 triệu</h2>
 					<div class="phone-card">
-						<img src="https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh hoạ" alt="Ảnh minh họa sản phẩm điện thoại thông minh" title="Điện thoại thông minh - mẫu demo" width="600" height="400" loading="lazy" />
+						<img src=images/tecnopova7.webp title="Điện thoại Tecno Pova 7" width="600" height="400" loading="lazy" />
 						<h3>Tecno Pova 7</h3>
 						<div class="rating">★★★★☆ 4.8</div>
 						<ul>
@@ -200,26 +204,27 @@
 							<li>Camera: 108MP + 2M chụp siêu nét</li>
 							<li>Hiệu năng: Chơi game mượt mà</li>
 						</ul>
-						<div class="price">3.990.000₫</div>
-						<button class="buy-button">Xem chi tiết</button>
+						<div class="price"> Giá tham khảo: 3.990.000₫</div>
+						<a href="https://s.shopee.vn/2g2ah8h8D0" target="_blank" rel="noopener noreferrer"><button class="buy-button">Xem chi tiết</button></a>
 					</div>
 
 					<div class="phone-card">
-						<img src="https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh hoạ" alt="Ảnh minh họa sản phẩm điện thoại thông minh" title="Điện thoại thông minh - mẫu demo" width="600" height="400" loading="lazy" />
-						<h3>Realme C55</h3>
+						<img src=images/nubianeo3.webp alt="Nubia Neo 3" title="Điện thoại Nubia Neo 3" width="600" height="400" loading="lazy" />
+						<h3>Nubia Neo 3</h3>
 						<div class="rating">★★★★☆ 4.6</div>
 						<ul>
-							<li>Màn hình: 6.72" - Tần số quét 90 Hz</li>
-							<li>Pin: 5000 mAh (sử dụng lâu)</li>
-							<li>Camera: Chính 64 MP & Phụ 2 MP đa chức năng</li>
+							<li>Màn hình: 6.8" - Tần số quét 120 Hz</li>
+							<li>Pin: 6000 mAh (sử dụng lâu)</li>
+							<li>Sạc nhanh: 33W không cần chờ đợi lâu</li>
+							<li>Camera: Chính 50 MP đa chức năng</li>
 							<li>Bộ nhớ: 128GB/256GB (thoải mái lưu trữ)</li>
 						</ul>
-						<div class="price">3.480.000₫</div>
+						<div class="price">Giá tham khảo: 3.890.000₫</div>
 						<button class="buy-button">Xem chi tiết</button>
 					</div>
 
 					<div class="phone-card">
-						<img src="https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh họa" alt="Ảnh minh họa sản phẩm điện thoại thông minh" title="Điện thoại thông minh - mẫu demo" width="600" height="400" loading="lazy" />
+						<img src=images/nubiav70d.webp alt="Nubia V70 Design" title="Điện thoại thông minh - mẫu demo" width="600" height="400" loading="lazy" />
 						<h3>Nubia V70 Design</h3>
 						<div class="rating">★★★★☆ 4.5</div>
 						<ul>
@@ -228,12 +233,12 @@
 							<li>Camera: 50 MP, ƒ/1.8, 2.0 MP chụp ảnh sắc nét</li>
 							<li>Sạc nhanh: Hỗ trợ sạc nhanh 22.5W</li>
 						</ul>
-						<div class="price">3.290.000₫</div>
+						<div class="price">Giá tham khảo: 3.290.000₫</div>
 						<button class="buy-button">Xem chi tiết</button>
 					</div>
 
 					<div class="phone-card">
-						<img src="https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh họa" alt="Ảnh minh họa sản phẩm điện thoại thông minh" title="Điện thoại thông minh - mẫu demo" width="600" height="400" loading="lazy" />
+						<img src=images/meizumblu21.webp alt="Meizu Mblu 21" title="Điện thoại Meizu Mblu 21" width="600" height="400" loading="lazy" />
 						<h3>Meizu Mblu 21</h3>
 						<div class="rating">★★★★☆ 4.0</div>
 						<ul>
@@ -243,12 +248,12 @@
 							<li>Chip set: Spreadtrum T606 thực hiện các tác vụ nhẹ nhàng</li>
 							<li>Rất phù hợp cho người dùng mạng xã hội, nghe gọi, nhắn tin cơ bản</li>
 						</ul>
-						<div class="price">1.990.000₫</div>
+						<div class="price">Giá tham khảo: 1.990.000₫</div>
 						<button class="buy-button">Xem chi tiết</button>
 					</div>
 
 					<div class="phone-card">
-						<img src="https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh họa " alt="Ảnh minh họa sản phẩm điện thoại thông minh" title="Điện thoại thông minh - mẫu demo" width="600" height="400" loading="lazy" />
+						<img src=images/nubiav70max.webp alt="Nubia V70 Max" title="Điện thoại Nubia V70 Max" width="600" height="400" loading="lazy" />
 						<h3>Nubia V70 Max</h3>
 						<div class="rating">★★★★☆ 4.5</div>
 						<ul>
@@ -260,12 +265,12 @@
 							<li>Có 2 phiên bản (6/128GB) - (8/128GB)</li>
 						</ul>
 
-						<div class="price">2.590.000₫ - 2.790.000₫</div>
+						<div class="price">Giá tham khảo: 2.590.000₫</div>
 						<button class="buy-button">Xem chi tiết</button>
 					</div>
 
 					<div class="phone-card">
-						<img src="https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh họa" alt="Ảnh minh họa sản phẩm điện thoại thông minh" title="Điện thoại thông minh - mẫu demo" width="600" height="400" loading="lazy" />
+						<img src=images/tecnospark40.webp alt="TECNO Spark 40" title="Điện thoại TECNO Spark 40" width="600" height="400" loading="lazy" />
 						<h3>TECNO Spark 40</h3>
 						<div class="rating">★★★★☆ 4.6</div>
 						<ul>
@@ -275,15 +280,14 @@
 							<li>Chip set: MediaTek Helio G91</li>
 							<li>Nổi bật: Có hỗ trợ NFC</li>
 							<li>Hiệu năng mạnh mẽ vượt trội phù hợp với mọi tác vụ thông thường</li>
-							<li>Có 2 phiên bản: (6/128GB) - (8/256GB)</li>
 						</ul>
 
-						<div class="price">2.890.000₫ - 3.490.000₫</div>
+						<div class="price">Giá tham khảo: 2.890.000₫</div>
 						<button class="buy-button">Xem chi tiết</button>
 					</div>
 
 					<div class="phone-card">
-						<img src="https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh họa" alt="Ảnh minh họa sản phẩm điện thoại thông minh" title="Điện thoại thông minh - mẫu demo" width="600" height="400" loading="lazy" />
+						<img src=images/itelrs4nfc.webp alt="Itel RS4 NFC" title="Điện thoại Itel RS4 NFC" width="600" height="400" loading="lazy" />
 						<h3>Itel RS4 NFC</h3>
 						<div class="rating">★★★★☆ 4.9</div>
 						<ul>
@@ -296,13 +300,11 @@
 							<li>Chơi tốt các game phổ thông hiện nay</li>
 							<li>Có 3 phiên bản:(8/128GB) - (8/256GB) - (12/256GB)</li>
 						</ul>
-						<div class="price">2.990.000₫ - 3.290.000₫ - 3.390.000₫</div>
+						<div class="price">Giá tham khảo: 2.990.000₫ - 3.290.000₫ - 3.390.000₫</div>
 						<button class="buy-button">Xem chi tiết</button>
 					</div>
 				</div>
-				<h3>
-					<i class="fas fa-exclamation-circle" style="color:#e67e22;"></i><strong> Lưu ý:</strong><i> Giá sản phẩm có thể thay đổi theo thị trường và thời gian. Hình ảnh sẽ được cập nhật khi có liên kết affiliate chính thức.</i>
-				</h3>
+				<h3><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="24px" fill="#e67e22"><path d="M0 0h24v24H0V0z" fill="none"/><circle cx="12" cy="19" r="2"/><path d="M10 3h4v12h-4z"/></svg><strong> Lưu ý:</strong> Giá sản phẩm có thể thay đổi theo thị trường và thời gian. Hình ảnh sẽ được cập nhật khi có liên kết affiliate chính thức.</h3>
 			</section>
 			<!-- Schema Markup: ItemList for Featured Products -->
 			<script type="application/ld+json">
@@ -317,7 +319,7 @@
 				      "item": {
 				        "@type": "Product",
 				        "name": "Tecno Pova 7",
-				        "image": "https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh hoạ",
+				        "image": "images/tecnopova7.webp",
 				        "description": "Màn hình: 6.78 inch IPS LCD, Pin: 7000 mAh (2 ngày sử dụng), Camera: 108MP + 2M chụp siêu nét, Hiệu năng: Chơi game mượt mà",
 				        "brand": {
 				          "@type": "Brand",
@@ -341,17 +343,17 @@
 				      "position": 2,
 				      "item": {
 				        "@type": "Product",
-				        "name": "Realme C55",
-				        "image": "https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh hoạ",
-				        "description": "Màn hình: 6.72\" - Tần số quét 90 Hz, Pin: 5000 mAh (sử dụng lâu), Camera: Chính 64 MP & Phụ 2 MP đa chức năng, Bộ nhớ: 128GB/256GB (thoải mái lưu trữ)",
+				        "name": "Nubia Neo 3",
+				        "image": "images/nubianeo3.webp",
+				        "description": "Màn hình: 6.8\" - Tần số quét 120 Hz, Pin: 6000 mAh (sử dụng lâu), Sạc nhanh: 33W không cần chờ đợi lâu, Camera: Chính 50 MP đa chức năng, Bộ nhớ: 128GB/256GB (thoải mái lưu trữ)",
 				        "brand": {
 				          "@type": "Brand",
-				          "name": "Realme"
+				          "name": "Nubia"
 				        },
 				        "offers": {
 				          "@type": "Offer",
 				          "priceCurrency": "VND",
-				          "price": "3480000",
+				          "price": "3890000",
 				          "availability": "https://schema.org/InStock"
 				        },
 				        "aggregateRating": {
@@ -367,7 +369,7 @@
 				      "item": {
 				        "@type": "Product",
 				        "name": "Nubia V70 Design",
-				        "image": "https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh hoạ",
+				        "image": "images/nubiav70d.webp",
 				        "description": "Màn hình: 6.72\" - Tần số quét 120 Hz, Pin: 5000 mAh (bền bỉ), Camera: 50 MP, ƒ/1.8, 2.0 MP chụp ảnh sắc nét, Sạc nhanh: Hỗ trợ sạc nhanh 22.5W",
 				        "brand": {
 				          "@type": "Brand",
@@ -392,7 +394,7 @@
 				      "item": {
 				        "@type": "Product",
 				        "name": "Meizu Mblu 21",
-				        "image": "https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh hoạ",
+				        "image": "images/meizumblu21.webp",
 				        "description": "Màn hình: 6.79\" - Tần số quét 90Hz, Pin: 4900 mAh (bền bỉ), Camera: 13 MP chụp ảnh ở mức cơ bản, Chip set: Spreadtrum T606 thực hiện các tác vụ nhẹ nhàng, Rất phù hợp cho người dùng mạng xã hội, nghe gọi, nhắn tin cơ bản",
 				        "brand": {
 				          "@type": "Brand",
@@ -417,7 +419,7 @@
 				      "item": {
 				        "@type": "Product",
 				        "name": "Nubia V70 Max",
-				        "image": "https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh hoạ",
+				        "image": "images/nubiav70max.webp",
 				        "description": "Màn hình: 6.9\" - Tần số quét 120Hz, Pin: 6000 mAh (bền bỉ), Camera: 50 MP, ƒ/1.8 2.0 MP, Chip set: Unisoc T606 hiệu năng ổn định, Phục vụ tốt các tác vụ cơ bản, Có 2 phiên bản (6/128GB) - (8/128GB)",
 				        "brand": {
 				          "@type": "Brand",
@@ -442,7 +444,7 @@
 				      "item": {
 				        "@type": "Product",
 				        "name": "TECNO Spark 40",
-				        "image": "https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh hoạ",
+				        "image": "images/tecnospark40.webp",
 				        "description": "Màn hình: 6.67\" - Tần số quét 120Hz, Pin: 5200 mAh (Rất trâu), Camera: 50MP + Dual Flash, Chip set: MediaTek Helio G91, Nổi bật: Có hỗ trợ NFC, Hiệu năng mạnh mẽ vượt trội phù hợp với mọi tác vụ thông thường, Có 2 phiên bản: (6/128GB) - (8/256GB)",
 				        "brand": {
 				          "@type": "Brand",
@@ -467,7 +469,7 @@
 				      "item": {
 				        "@type": "Product",
 				        "name": "Itel RS4 NFC",
-				        "image": "https://placehold.co/500x300/87ceeb/000000?text=Hình ảnh minh hoạ",
+				        "image": "images/itelrs4nfc.webp",
 				        "description": "Màn hình: 6.56\" - Tần số quét 120Hz, Pin: 5000 mAh (1 ngày sử dụng), Camera: Camera góc rộng: 50 MP, f/1.6, AF, Chip set: MediaTek Helio G99 Ultimate, Nổi bật: Có hỗ trợ NFC, chế độ trò chơi mạnh mẽ, Sạc nhanh: Hỗ trợ sạc nhanh 45W, Chơi tốt các game phổ thông hiện nay, Có 3 phiên bản:(8/128GB) - (8/256GB) - (12/256GB)",
 				        "brand": {
 				          "@type": "Brand",
@@ -491,7 +493,7 @@
 			</script>
 
 			<section id="advisor" class="advisor">
-				<h2><i class="fas fa-tools" style="color:#2980b9;"></i> Công cụ tư vấn chọn điện thoại</h2>
+				<h2><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#1f1f1f"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M21.67,18.17l-5.3-5.3h-0.99l-2.54,2.54v0.99l5.3,5.3c0.39,0.39,1.02,0.39,1.41,0l2.12-2.12 C22.06,19.2,22.06,18.56,21.67,18.17z M18.84,19.59l-4.24-4.24l0.71-0.71l4.24,4.24L18.84,19.59z"/></g><g><path d="M17.34,10.19l1.41-1.41l2.12,2.12c1.17-1.17,1.17-3.07,0-4.24l-3.54-3.54l-1.41,1.41V1.71L15.22,1l-3.54,3.54l0.71,0.71 h2.83l-1.41,1.41l1.06,1.06l-2.89,2.89L7.85,6.48V5.06L4.83,2.04L2,4.87l3.03,3.03h1.41l4.13,4.13l-0.85,0.85H7.6l-5.3,5.3 c-0.39,0.39-0.39,1.02,0,1.41l2.12,2.12c0.39,0.39,1.02,0.39,1.41,0l5.3-5.3v-2.12l5.15-5.15L17.34,10.19z M9.36,15.34 l-4.24,4.24l-0.71-0.71l4.24-4.24l0,0L9.36,15.34L9.36,15.34z"/></g></g></g></svg> Công cụ tư vấn chọn điện thoại</h2>
 				<p>Trả lời các câu hỏi dưới đây để chúng tôi đề xuất điện thoại phù hợp với bạn</p>
 
 				<div class="quiz-container">
@@ -694,7 +696,7 @@
 						<img src=images/5-tieu-chi.webp alt="5 tiêu chí quan trọng khi chọn điện thoại giá rẻ" title="5 tiêu chí chọn điện thoại giá rẻ" width="600" height="400" loading="lazy">
 						<h3>5 tiêu chí quan trọng khi chọn điện thoại giá rẻ</h3>
 						<p>Hiểu rõ những yếu tố thực sự quan trọng giúp bạn chọn được điện thoại tốt nhất trong tầm giá.</p>
-						<p><i class="fas fa-history"></i> Cập nhật: 10/10/2025</p>
+						<p>Cập nhật: 10/10/2025</p>
 						<a href="htmls/5-tieu-chi.html">Đọc thêm →</a>
 					</article>
 
@@ -850,10 +852,25 @@
 					<div class="footer-section">
 						<h3>Kết nối với chúng tôi</h3>
 						<div class="social-icons">
-							<a href="https://x.com/noir_nguyenn?t=OsfQvOGgyxbbs-aj8yA9kA&s=09"><i class="fab fa-twitter"></i></a>
-							<a href="https://www.linkedin.com/in/trong-nguyen-le-627067384/"><i class="fab fa-linkedin-in"></i></a>
-							<a href="https://github.com/NoirNguyen2007"><i class="fab fa-github"></i></a>
-							<a href="https://www.facebook.com/profile.php?id=61582158842856"><i class="fab fa-facebook"></i></a>
+							<a href="https://x.com/noir_nguyenn?t=OsfQvOGgyxbbs-aj8yA9kA&s=09"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+  <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.949.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.72 0-4.924 2.204-4.924 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.708.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.062c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.418-1.68 1.318-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 14.004-7.496 14.004-13.986 0-.21 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548z"/>
+</svg></a>
+							<a href="https://www.linkedin.com/in/trong-nguyen-le-627067384/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+  <path d="M4.983 3.5C4.983 4.88 3.88 6 2.49 6 1.11 6 0 4.88 0 3.5 0 2.12 1.11 1 2.49 1c1.39 0 2.493 1.12 2.493 2.5zM.26 8.5h4.46V24H.26zM8.74 8.5h4.28v2.11h.06c.6-1.13 2.08-2.32 4.28-2.32C21.29 8.29 24 10.5 24 15.19V24h-4.46v-8.13c0-1.94-.03-4.44-2.71-4.44-2.71 0-3.13 2.12-3.13 4.3V24H9.24z"/>
+</svg></a>
+							<a href="https://github.com/NoirNguyen2007"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+  <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.088 3.292 9.397 7.868 10.917.575.107.785-.25.785-.556
+    0-.275-.01-1.003-.015-1.968-3.2.695-3.878-1.543-3.878-1.543-.523-1.328-1.277-1.683-1.277-1.683-1.044-.714.08-.699.08-.699
+    1.154.081 1.762 1.185 1.762 1.185 1.027 1.76 2.695 1.252 3.35.958.104-.744.402-1.253.732-1.541-2.555-.29-5.238-1.278-5.238-5.686
+    0-1.256.448-2.283 1.184-3.088-.118-.29-.513-1.457.112-3.037 0 0 .965-.309 3.162 1.18a10.95 10.95 0 0 1 2.879-.387
+    c.977.005 1.962.132 2.879.387 2.197-1.489 3.16-1.18 3.16-1.18.627 1.58.233 2.747.115 3.037.737.805
+    1.183 1.832 1.183 3.088 0 4.42-2.688 5.392-5.253 5.677.413.355.777 1.056.777 2.129
+    0 1.537-.014 2.773-.014 3.15 0 .31.207.671.792.556C20.713 21.393 24 17.083 24 12
+    24 5.648 18.352.5 12 .5z"/>
+</svg></a>
+							<a href="https://www.facebook.com/profile.php?id=61582158842856"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+  <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82V14.706h-3.41v-3.622h3.41V8.413c0-3.377 2.064-5.216 5.08-5.216 1.445 0 2.687.108 3.048.156v3.534h-2.092c-1.64 0-1.957.779-1.957 1.921v2.516h3.914l-.51 3.622H16.9V24h5.775C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
+</svg></a>
 						</div>
 					</div>
 				</div>
