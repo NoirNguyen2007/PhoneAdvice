@@ -3,26 +3,26 @@ const devices = [
     {
         name: "Tecno Pova 7",
         price: 3990000,
-        batteryScore: 90,
+        batteryScore: 99,
         cameraScore: 80,
         performanceScore: 85,
         screenScore: 75,
         designScore: 80,
         brandScore: 70,
         reasons: ["Pin 7000mAh siêu trâu", "Chơi game mượt", "Giá hợp lý 3.99 triệu"],
-        link: "https://shopee.vn/search?keyword=Tecno%20Pova%207"
+        link: "https://s.shopee.vn/1qTTt9YoG0"
     },
     {
-        name: "Realme C55",
-        price: 3480000,
+        name: "Nubia Neo 3",
+        price: 3890000,
         batteryScore: 80,
         cameraScore: 85,
-        performanceScore: 80,
+        performanceScore: 90,
         screenScore: 82,
         designScore: 85,
         brandScore: 80,
-        reasons: ["Camera 64MP chụp nét", "Thiết kế trẻ trung", "Giá chỉ 3.48 triệu"],
-        link: "https://shopee.vn/search?keyword=Realme%20C55"
+        reasons: ["Chip mạnh phù hợp chơi game", "Thiết kế trẻ trung", "Giá chỉ 3.89 triệu"],
+        link: "https://s.shopee.vn/9AG4clthXV"
     },
     {
         name: "Nubia V70 Design",
@@ -34,7 +34,7 @@ const devices = [
         designScore: 90,
         brandScore: 65,
         reasons: ["Camera selfie đẹp", "Thiết kế độc lạ", "Giá 3.29 triệu"],
-        link: "https://shopee.vn/search?keyword=Nubia%20V70%20Design"
+        link: "https://s.shopee.vn/4VUF4EBU3G"
     },
       {
         name: "Meizu Mblu 21",
@@ -46,7 +46,7 @@ const devices = [
         designScore: 75,
         brandScore: 60,
         reasons: ["Giá cực rẻ 1.99 triệu", "Phù hợp cho nhu cầu cơ bản", "Màn hình lớn 6.79 inch"],
-        link: "https://shopee.vn/search?keyword=Meizu%20Mblu%2021"
+        link: "https://s.shopee.vn/7V7qdluNFv"
     },
     {
         name: "Nubia V70 Max",
@@ -58,7 +58,7 @@ const devices = [
         designScore: 85,
         brandScore: 65,
         reasons: ["Pin 6000mAh bền bỉ", "Hiệu năng ổn định", "Màn hình 6.9 inch 120Hz"],
-        link: "https://shopee.vn/search?keyword=Nubia%20V70%20Max"
+        link: "https://s.shopee.vn/qawhY1gsP"
     },
      {
         name: "TECNO Spark 40",
@@ -70,7 +70,7 @@ const devices = [
         designScore: 80,
         brandScore: 70,
         reasons: ["Hỗ trợ NFC", "Hiệu năng mạnh mẽ", "Màn hình 120Hz mượt mà"],
-        link: "https://shopee.vn/search?keyword=TECNO%20Spark%2040"
+        link: "https://s.shopee.vn/8V0NpfFPUI"
     },
      {
         name: "Itel RS4 NFC",
@@ -82,7 +82,7 @@ const devices = [
         designScore: 82,
         brandScore: 65,
         reasons: ["Chip Helio G99 Ultimate chơi game mượt", "Sạc nhanh 45W siêu tốc", "Hỗ trợ NFC tiện lợi", "Màn hình 6.56 inch 120Hz sắc nét", "RAM lớn lên đến 12GB đa nhiệm tốt"],
-        link: "https://shopee.vn/search?keyword=Itel%20RS4%20NFC"
+        link: "https://s.shopee.vn/9fCLDqNlwL"
     },
     {
         name: "TECNO Spark 30 5G",
@@ -94,7 +94,7 @@ const devices = [
         designScore: 85,
         brandScore: 75,
         reasons: ["Camera 108MP AI chụp đêm sắc nét", "Hỗ trợ 5G kết nối siêu tốc", "Màn hình 6.67 inch 120Hz mượt mà", "Pin 5000mAh dùng cả ngày với sạc 18W", "Thiết kế IP54 chống nước bụi"],
-        link: "https://shopee.vn/search?keyword=TECNO%20Spark%2030%205G"
+        link: "https://s.shopee.vn/3LIHgHJSsp"
     },
      {
         name: "Itel P55 Plus NFC",
@@ -106,7 +106,7 @@ const devices = [
         designScore: 78,
         brandScore: 65,
         reasons: ["RAM 8GB + 256GB lưu trữ thoải mái", "Hỗ trợ NFC thanh toán tiện lợi", "Màn hình 6.6 inch 90Hz mượt mà", "Pin 5000mAh dùng cả ngày", "Chip Unisoc T606 đa nhiệm ổn định"],
-        link: "https://shopee.vn/search?keyword=Itel%20P55%20Plus%20NFC"
+        link: "https://s.shopee.vn/11piGSukT"
     }
 ];
 
@@ -338,6 +338,7 @@ gtag('event', 'quiz_result', {
 // Chia sẻ kết quả trên Twitter
 function shareResult(deviceName) {
     const shareText = `Tôi vừa làm quiz trên PhoneAdvice và được đề xuất ${deviceName}! 📱 Thử ngay: https://noirnguyen2007.github.io/PhoneAdvice #DienThoaiGiaRe #TechVN`;
+
     // Bắn event GA4
 gtag('event', 'quiz_share', {
     device: deviceName
